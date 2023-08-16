@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.swiggy.testscripts.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.702 sec <<< FAILURE!
+runScenario(com.swiggy.testscripts.TestRunner)  Time elapsed: 0.064 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.swiggy.testscripts.OrderPizzaTestStep.a_user_is_on_the_home_of_swiggy(OrderPizzaTestStep.java:15)
+	at ✽.a user is on the home of Swiggy(file:///D:/SimpliLearn/Phase-2/freshfolderToreferAssignment/SwiggyProject/SwiggyProject/Feature/orderPizza.feature:5)
+
+runScenario(com.swiggy.testscripts.TestRunner)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.swiggy.testscripts.OrderPizzaTestStep.a_user_is_on_the_home_of_swiggy(OrderPizzaTestStep.java:15)
+	at ✽.a user is on the home of Swiggy(file:///D:/SimpliLearn/Phase-2/freshfolderToreferAssignment/SwiggyProject/SwiggyProject/Feature/orderPizza.feature:5)
+
