@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-12T23:06:37 IST" name="com.swiggy.testscripts.TestRunner" finished-at="2023-08-12T23:07:40 IST" duration-ms="62253">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.swiggy.testscripts.TestRunner@45752059]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-08-12T23:06:37 IST" name="Command line test" finished-at="2023-08-12T23:07:40 IST" duration-ms="62253">
+      <class name="com.swiggy.testscripts.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.swiggy.testscripts.TestRunner@45752059]" started-at="2023-08-12T23:06:37 IST" name="setUpClass" finished-at="2023-08-12T23:06:38 IST" duration-ms="350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4905c46b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.swiggy.testscripts.TestRunner@45752059]" started-at="2023-08-12T23:06:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-12T23:07:09 IST" duration-ms="31495" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Order Pizza From Swiggy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[a user should be able to order Pizza from Swiggy]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+at org.openqa.selenium.interactions.Actions.<init>(Actions.java:65)
+at com.swiggy.pages.Landinpage.<init>(Landinpage.java:29)
+at com.swiggy.testscripts.Driver.init(Driver.java:63)
+at com.swiggy.testscripts.BeforeAfter.setUp(BeforeAfter.java:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.swiggy.testscripts.TestRunner@45752059]" started-at="2023-08-12T23:07:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-12T23:07:40 IST" duration-ms="30341" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Order Pizza From Swiggy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[a user should be able to order Pizza from Swiggy]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+at org.openqa.selenium.interactions.Actions.<init>(Actions.java:65)
+at com.swiggy.pages.Landinpage.<init>(Landinpage.java:29)
+at com.swiggy.testscripts.Driver.init(Driver.java:63)
+at com.swiggy.testscripts.BeforeAfter.setUp(BeforeAfter.java:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.swiggy.testscripts.TestRunner@45752059]" started-at="2023-08-12T23:07:40 IST" name="tearDownClass" finished-at="2023-08-12T23:07:40 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.swiggy.testscripts.TestRunner -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.swiggy.testscripts.TestRunner -->
+</testng-results>
