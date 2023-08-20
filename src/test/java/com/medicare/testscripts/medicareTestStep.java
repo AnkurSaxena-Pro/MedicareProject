@@ -13,6 +13,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 //import org.openqa.selenium.remote.Response;
 //import org.testng.Assert;
 
+import org.jsoup.nodes.Attributes;
 import org.junit.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,14 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class medicareTestStep extends Driver {
 
@@ -249,16 +258,43 @@ public class medicareTestStep extends Driver {
     }
 
 
-    @When("hit this urlTwo {string} Also validate response contain {string}")
-    public void hitThisUrlAlsoValidateResponseContain(String url, String ResponseMustContainThisValue) {
+    @When("hit this urlTwo {string} Also validate response contain {string} and check with {string}")
+    public void hitThisUrlTwoAlsoValidateResponseContainAndCheckWith(String url, String ResponseMustContainThisValue, String ExpectedValue) {
+
 
         RestAssured.baseURI = url;
         // Get the RequestSpecification of the request to be sent to the server.
         RequestSpecification httpRequest = RestAssured.given();
         Response response = httpRequest.get(url);
 
-    }
+        // Get the response body as a string
+        String responseBody = response.getBody().asString();
 
+        // Parse the HTML response using Jsoup
+        Document document = Jsoup.parse(responseBody);
+
+        // Find elements containing the desired value ("Analgesics")
+        Elements elementsContainingValue = document.getElementsContainingOwnText(ResponseMustContainThisValue);
+        //String Element2 = elementsContainingValue.get(1).toString();
+        Attributes abc= elementsContainingValue.get(1).attributes();
+        String Actualvalue = abc.get("id");
+        Assert.assertEquals(ExpectedValue, Actualvalue);
+
+        //ActualValue.getClass().
+        //Assert.assertEquals(ResponseMustContainThisValue, ActualValue);
+        //Assert.
+        // Check if the value was found in the response
+        /*
+        if (!elementsContainingValue.isEmpty()) {
+            // Value found, your validation passes
+            // You can also print or log the extracted information if needed
+            System.out.println("Desired value found: " + elementsContainingValue.first().text());
+        } else {
+            // Value not found, validation fails
+            System.out.println("Desired value not found in the response.");
+        }
+        */
+    }
 
 
 
